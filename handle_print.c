@@ -19,7 +19,7 @@ int handle_print(const char *formatSpecifier, int *currentIndex, va_list argumen
     int unknownLength = 0;
     int printedCharacters = -1;
 
-    FormatType formatTypes[] = {
+   format_t formatTypes[] = {
         {'c', print_character}, {'s', print_custom_string}, {'%', print_percentage},
         {'i', print_integer}, {'d', print_integer}, {'b', print_binary_number},
         {'u', print_unsigned_number}, {'o', print_octal_number}, {'x', print_hexadecimal},
