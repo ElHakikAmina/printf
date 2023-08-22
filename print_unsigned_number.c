@@ -40,7 +40,7 @@ int print_unsigned_number(va_list types, char b[],
 
 	while (num > 0)
 	{
-		buffer[i--] = (num % 10) + '0';
+		b[i--] = (num % 10) + '0';
 		num /= 10;
 	}
     i=i+1;

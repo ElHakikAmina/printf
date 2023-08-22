@@ -20,7 +20,7 @@ int print_octal_number(va_list types, char b[],
 
 	UNUSED(w);
 
-	num = convert_size_unsgnd(num, s);
+	num = convert_unsigned_size(num, s);
 
 	if (num == 0)
 		b[i--] = '0';
@@ -38,5 +38,5 @@ int print_octal_number(va_list types, char b[],
 
 	i++;
 
-	return (write_unsgnd(0, i, b, f, w, p, s));
+	return (write_unsigned(0, i, b, f, w, p, s));
 }
