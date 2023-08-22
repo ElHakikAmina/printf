@@ -33,7 +33,7 @@ int print_non_printable_characters(va_list types, char b[],
 		if (is_printable_character(str[index]))
 			b[index + offset] = str[index];
 		else
-			offset += append_hexa_code(str[index], b, index + offset);
+			offset += append_hexadecimal_code(str[index], b, index + offset);
             index=index+1;
 	}
 
