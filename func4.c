@@ -78,7 +78,7 @@ int write_number(int is_negative, int ind, char b[],
 	else if (f & FLAG_SPACE)
 		extra_ch = ' ';
 
-	return (write_num(ind, b, f, w, p,
+	return (write_integer(ind, b, f, w, p,
 		length, padd, extra_ch));
 }
 
