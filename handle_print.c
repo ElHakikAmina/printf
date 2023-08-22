@@ -13,50 +13,52 @@
  *
  * Return: 1 if successful, 2 if unrecognized format.
  */
-int handle_print(const char *formatSpecifier, int *currentIndex, va_list argumentList,
+int handle_print(const char *specifier, int *currentIndex, va_list argumentList,
                   char outputBuffer[], int activeFlags, int fieldWidth, int precision, int argumentSize)
 {
     int unknownLength = 0;
     int printedCharacters = -1;
 
-   format_t formatTypes[] = {
+    format_t formatTypes[] = {
         {'c', print_character}, {'s', print_custom_string}, {'%', print_percentage},
         {'i', print_integer}, {'d', print_integer}, {'b', print_binary_number},
-        {'u', print_unsigned_number}, {'o', print_octal_number}, {'x', print_hexadecimal},
+        {'u', print_unsigned_number}, {'o', print_octal_number}, {'x', print_hexadecimal_number},
         {'X', print_uppercase_hexadecimal}, {'p', print_memory_address}, {'S', print_non_printable_characters},
         {'r', print_reversed_string}, {'R',  print_rot13_encoded_string}, {'\0', NULL}
     };
 
-    for (int i = 0; formatTypes[i].formatSpecifier != '\0'; i++) {
-        if (formatSpecifier[*currentIndex] == formatTypes[i].formatSpecifier) {
-            return formatTypes[i].function(argumentList, outputBuffer, activeFlags, fieldWidth, precision, argumentSize);
+    int i;
+    for ( i = 0; formatTypes[i].specifier != '\0'; i++) {
+        if (specifier[*currentIndex] == formatTypes[i].specifier) {
+            return formatTypes[i].handler(argumentList, outputBuffer, activeFlags, fieldWidth, precision, argumentSize);
         }
     }
 
-    if (formatTypes[i].formatSpecifier == '\0') {
-        if (formatSpecifier[*currentIndex] == '\0') {
+    if (formatTypes[i].specifier == '\0') {
+        if (specifier[*currentIndex] == '\0') {
             return -1; /* End of formatSpecifier string, return -1.*/
         }
         
         unknownLength += write(1, "%%", 1);
 
-        if (formatSpecifier[*currentIndex - 1] == ' ') {
+        if (specifier[*currentIndex - 1] == ' ') {
             unknownLength += write(1, " ", 1);
         } else if (fieldWidth) {
             (*currentIndex)--;
-            while (formatSpecifier[*currentIndex] != ' ' && formatSpecifier[*currentIndex] != '%') {
+            while (specifier[*currentIndex] != ' ' && specifier[*currentIndex] != '%') {
                 (*currentIndex)--;
             }
-            if (formatSpecifier[*currentIndex] == ' ') {
+            if (specifier[*currentIndex] == ' ') {
                 (*currentIndex)--;
             }
             return 1;
         }
 
-        unknownLength += write(1, &formatSpecifier[*currentIndex], 1);
+        unknownLength += write(1, &specifier[*currentIndex], 1);
         return unknownLength;
     }
 
     return printedCharacters;
 }
+
 
