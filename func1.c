@@ -3,7 +3,7 @@
 /************************* PRINT CHAR *************************/
 
 /**
- * print_char - Prints a single character.
+ * print_character - Prints a single character.
  * @args: List of arguments.
  * @b: Buffer array to handle printing.
  * @f:  flags that Calculates active flags.
