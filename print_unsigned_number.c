@@ -30,7 +30,7 @@ int print_unsigned_number(va_list types, char b[],
 {
 	int i = BUFFER_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
-//convert_unsigned_size
+/*convert_unsigned_size*/
 	num = convert_unsigned_size(num, s);
 
 	if (num == 0)

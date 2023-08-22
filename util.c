@@ -7,7 +7,7 @@
  * Return: 1 : character is printable, 0: otherwise
  */
 int is_printable_character(char character) {
-    // Check if the character is within the printable ASCII range
+    /* Check if the character is within the printable ASCII range*/
     return (character >= 32 && character < 127);
 }
 
@@ -42,7 +42,7 @@ int append_hexadecimal_code(char ascii_code, char b[], int index)
  * Return: 1 if c : digit, 0 : otherwise
  */
 int is_digit_character(char character) {
-    // Check if the character is a digit (0-9)
+    /* Check if the character is a digit (0-9)*/
     return (character >= '0' && character <= '9');
 }
 

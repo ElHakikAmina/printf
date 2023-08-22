@@ -35,7 +35,7 @@ int handle_print(const char *formatSpecifier, int *currentIndex, va_list argumen
 
     if (formatTypes[i].formatSpecifier == '\0') {
         if (formatSpecifier[*currentIndex] == '\0') {
-            return -1; // End of formatSpecifier string, return -1.
+            return -1; /* End of formatSpecifier string, return -1.*/
         }
         
         unknownLength += write(1, "%%", 1);

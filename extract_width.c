@@ -10,32 +10,32 @@
  */
 int extract_width(const char *formatString, int *currentIndex, va_list argsList)
 {
-    int index = *currentIndex + 1; // Start checking after the '%'
+    int index = *currentIndex + 1; /* Start checking after the '%' */
     int width = 0;
 
-    // Loop through the format string to find the width value
+    /* Loop through the format string to find the width value */
     for (; formatString[index] != '\0'; index++)
     {
-        // Check if the character is a digit
+        /* Check if the character is a digit */
         if (is_digit(formatString[index]))
         {
             width *= 10;
             width += formatString[index] - '0';
         }
-        // Check if width is specified as an asterisk (*)
+        /* Check if width is specified as an asterisk (*) */
         else if (formatString[index] == '*')
         {
-            index++; // Move past the asterisk
-            width = va_arg(argsList, int); // Get width from arguments
+            index++; /* Move past the asterisk */
+            width = va_arg(argsList, int); /* Get width from arguments */
             break;
         }
         else
         {
-            break; // Stop if a non-digit, non-asterisk character is encountered
+            break; /* Stop if a non-digit, non-asterisk character is encountered */
         }
     }
 
-    // Update the current index to point to the last processed character
+    /* Update the current index to point to the last processed character */
     *currentIndex = index - 1;
 
     return width;

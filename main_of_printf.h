@@ -5,9 +5,9 @@
 #include <unistd.h>
 
 
-//set the size of buffer to 1024
+/*set the size of buffer to 1024*/
 #define BUFFER_SIZE 1024
-//this to vid compiler error
+/*this to vid compiler error*/
 #define UNUSED(x) (void)(x)
 
 
@@ -50,7 +50,7 @@ int handle_print(const char *specifier, int *index,
                  int w, int p, int s);
 
 /************** FUNCTIONS PROTOTYPES ***************/
-// b:buffer, f:flags, w:width, p:precision , s: size
+/* b:buffer, f:flags, w:width, p:precision , s:  */
 /* Functions to print characters and strings */
 int print_character(va_list args, char b[],
                     int f, int w, int p, int s);
