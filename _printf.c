@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 void print_buffer(char b[], int *buffer_index);
 

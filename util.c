@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 /**
  * is_printable_character -  Char is printable or NO

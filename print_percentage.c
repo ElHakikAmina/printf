@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
  /* THIS FUNCTION PRINT PERCENT SIGN : print_percentage*/
 /**
  * print_percent - Handles printing of a percent sign.

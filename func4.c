@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 /**
  * write_char - function that Prints a string
@@ -30,7 +30,7 @@ UNUSED(s);
 	if (w > 1)
 	{
 		b[BUFFER_SIZE - 1] = '\0';
-		for (index = 0; index < w - 1; index++)
+		for (index = 0; index < w - 1; i++)
 			b[BUFFER_SIZE - index - 2] = padd;
 
 		if (f & FLAG_MINUS)
@@ -78,7 +78,7 @@ int write_number(int is_negative, int ind, char b[],
 	else if (f & FLAG_SPACE)
 		extra_ch = ' ';
 
-	return (write_integer(ind, b, f, w, p,
+	return (write_num(ind, b, f, w, p,
 		length, padd, extra_ch));
 }
 
@@ -116,19 +116,19 @@ int write_integer(int ind, char b[],
 		for (i = 1; i < w - length + 1; i++)
 			b[i] = padd;
 		b[i] = '\0';
-		if (f & FLAG_MINUS && padd == ' ')
+		if (flags & F_MINUS && padd == ' ')
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
-			return (write(1, &b[ind], length) + write(1, &b[1], i - 1));
+			return (write(1, &bb[ind], length) + write(1, &b[1], i - 1));
 		}
-		else if (!(f & FLAG_MINUS) && padd == ' ')
+		else if (!(flags & F_MINUS) && padd == ' ')
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
 			return (write(1, &b[1], i - 1) + write(1, &b[ind], length));
 		}
-		else if (!(f & FLAG_MINUS) && padd == '0')
+		else if (!(flags & F_MINUS) && padd == '0')
 		{
 			if (extra_c)
 				b[--padd_start] = extra_c;
@@ -164,7 +164,7 @@ int write_unsigned(int is_negative, int ind,
 	UNUSED(is_negative);
 	UNUSED(s);
 
-	if (p == 0 && ind == BUFFER_SIZE  - 2 && b[ind] == '0')
+	if (precision == 0 && ind == BUFFER_SIZE  - 2 && b[ind] == '0')
 		return (0); 
 
 	if (p > 0 && p < length)

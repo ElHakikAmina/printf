@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 /**
  * extract_precision - Calculates the precision for formatting and printing.
@@ -29,7 +29,7 @@ int extract_precision(const char *formatString, int *currentIndex, va_list argsL
     for (index += 1; formatString[index] != '\0'; index++)
     {
         /* Check if the character is a digit */
-        if (is_digit_character(formatString[index]))
+        if (is_digit(formatString[index]))
         {
             p *= 10; /* Multiply the existing precision by 10 */
             p += formatString[index] - '0'; /* Add the digit to the precision */

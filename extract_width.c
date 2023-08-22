@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 /**
  * extract_width - Calculate the width for printing.
@@ -17,7 +17,7 @@ int extract_width(const char *formatString, int *currentIndex, va_list argsList)
     for (; formatString[index] != '\0'; index++)
     {
         /* Check if the character is a digit */
-        if (is_digit_character(formatString[index]))
+        if (is_digit(formatString[index]))
         {
             width *= 10;
             width += formatString[index] - '0';

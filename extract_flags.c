@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 /**
  * getFlags - Extracts and calculates active flags from the format string.

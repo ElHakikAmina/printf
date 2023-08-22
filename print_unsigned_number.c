@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 /************************* PRINT UNSIGNED NUMBER *************************/
 /**
  * print_unsigned - Prints an unsigned number
@@ -40,7 +40,7 @@ int print_unsigned_number(va_list types, char b[],
 
 	while (num > 0)
 	{
-		b[i--] = (num % 10) + '0';
+		buffer[i--] = (num % 10) + '0';
 		num /= 10;
 	}
     i=i+1;

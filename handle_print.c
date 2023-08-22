@@ -27,10 +27,10 @@ int handle_print(const char *specifier, int *currentIndex, va_list argumentList,
         {'r', print_reversed_string}, {'R',  print_rot13_encoded_string}, {'\0', NULL}
     };
 
-    int i;
+int i;
     for ( i = 0; formatTypes[i].specifier != '\0'; i++) {
         if (specifier[*currentIndex] == formatTypes[i].specifier) {
-            return formatTypes[i].handler(argumentList, outputBuffer, activeFlags, fieldWidth, precision, argumentSize);
+            return formatTypes[i].fn(argumentList, outputBuffer, activeFlags, fieldWidth, precision, argumentSize);
         }
     }
 
@@ -60,5 +60,4 @@ int handle_print(const char *specifier, int *currentIndex, va_list argumentList,
 
     return printedCharacters;
 }
-
 

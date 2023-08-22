@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 /***** PRINT  IN LOWERCASE OR UPPERCASE *****/
 /**
  * print_hexa - Prints a hexadecimal number in lowercase or uppercase
@@ -13,7 +13,7 @@
  * @s: Size
  * Return: Number of chars printed
  */
-int print_hexadecimal(va_list types, char map_to[], char b[],
+int print_hexadecimal(va_list types, char map_to[], char buffer[],
 	int f, char flag_ch, int w, int p, int s)
 {
 	int index = BUFFER_SIZE - 2;

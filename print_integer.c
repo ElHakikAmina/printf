@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 /**
  * print_int - Prints an integer.
  * @args: List of arguments.

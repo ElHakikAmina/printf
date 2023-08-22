@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 /**** Function THAT PRINT A STRING *****/
 /**
  * print_custom_string - Prints a string.
