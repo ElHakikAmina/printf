@@ -120,7 +120,7 @@ int write_integer(int ind, char b[],
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
-			return (write(1, &bb[ind], length) + write(1, &b[1], i - 1));
+			return (write(1, &b[ind], length) + write(1, &b[1], i - 1));
 		}
 		else if (!(f & FLAG_MINUS) && padd == ' ')
 		{
