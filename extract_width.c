@@ -17,7 +17,7 @@ int extract_width(const char *formatString, int *currentIndex, va_list argsList)
     for (; formatString[index] != '\0'; index++)
     {
         /* Check if the character is a digit */
-        if (is_digit(formatString[index]))
+        if (is_digit_character(formatString[index]))
         {
             width *= 10;
             width += formatString[index] - '0';
