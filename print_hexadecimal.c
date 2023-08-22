@@ -13,7 +13,7 @@
  * @s: Size
  * Return: Number of chars printed
  */
-int print_hexadecimal(va_list types, char map_to[], char buffer[],
+int print_hexadecimal(va_list types, char map_to[], char b[],
 	int f, char flag_ch, int w, int p, int s)
 {
 	int index = BUFFER_SIZE - 2;
