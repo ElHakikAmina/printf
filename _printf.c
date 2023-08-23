@@ -1,3 +1,6 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM 
+ * */
 #include "main.h"
 
 void print_buffer(char b[], int *buffer_index);
