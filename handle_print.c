@@ -30,7 +30,7 @@ int handle_print(const char *specifier, int *currentIndex, va_list argumentList,
 int i;
     for ( i = 0; formatTypes[i].specifier != '\0'; i++) {
         if (specifier[*currentIndex] == formatTypes[i].specifier) {
-            return formatTypes[i].fn(argumentList, outputBuffer, activeFlags, fieldWidth, precision, argumentSize);
+            return formatTypes[i].handler(argumentList, outputBuffer, activeFlags, fieldWidth, precision, argumentSize);
         }
     }
 
