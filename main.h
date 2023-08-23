@@ -12,8 +12,11 @@
 
 
 /* this flags will be used in the program */
+/* 1 for - */
 #define FLAG_MINUS 1
+/* 2 for + */
 #define FLAG_PLUS 2
+/* 4 for 0*/
 #define FLAG_ZERO 4
 #define FLAG_HASH 8
 #define FLAG_SPACE 16
