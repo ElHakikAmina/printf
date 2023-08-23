@@ -33,7 +33,7 @@ int print_non_printable_characters(va_list types, char b[],
 		if (is_printable_character(str[index]))
 			b[index + offset] = str[index];
 		else
-			offset += append_hexa_code(str[index], b, index + offset);
+			offset += append_hexadecimal_code(str[index], b, index + offset);
             index=index+1;
 	}
 
@@ -53,7 +53,7 @@ int print_non_printable_characters(va_list types, char b[],
  * Return: Numbers of characters that are  printed
  */
 
-int int print_reversed_string(va_list types, char b[],
+int print_reversed_string(va_list types, char b[],
 	int f, int w, int p, int s)
 {
 	char *str;
