@@ -1,4 +1,4 @@
-#include "main_of_printf.h"
+#include "main.h"
 
 /**
  * handle_print - Handles printing of an argument based on its type.
