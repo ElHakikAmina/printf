@@ -78,7 +78,7 @@ int write_number(int is_negative, int ind, char b[],
 	else if (f & FLAG_SPACE)
 		extra_ch = ' ';
 
-	return (write_num(ind, b, f, w, p,
+	return (write_integer(ind, b, f, w, p,
 		length, padd, extra_ch));
 }
 
@@ -120,9 +120,9 @@ int write_integer(int ind, char b[],
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
-			return (write(1, &bb[ind], length) + write(1, &b[1], i - 1));
+			return (write(1, &b[ind], length) + write(1, &b[1], i - 1));
 		}
-		else if (!(flags & F_MINUS) && padd == ' ')
+		else if (!(flags & FLAG_MINUS) && padd == ' ')
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
@@ -164,7 +164,7 @@ int write_unsigned(int is_negative, int ind,
 	UNUSED(is_negative);
 	UNUSED(s);
 
-	if (precision == 0 && ind == BUFFER_SIZE  - 2 && b[ind] == '0')
+	if (p == 0 && ind == BUFFER_SIZE  - 2 && b[ind] == '0')
 		return (0); 
 
 	if (p > 0 && p < length)
