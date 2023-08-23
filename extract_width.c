@@ -1,3 +1,7 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND ASMA AOUB
+ * */
+
 #include "main.h"
 
 /**
