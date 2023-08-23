@@ -52,6 +52,6 @@ int print_memory_address(va_list types, char b[],
 	index++;
 
 	/*return (write(1, &buffer[i], BUFFER_SIZE - i - 1));*/
-	return (write_pointer(b, index, length,
+	return (write_memory_address(b, index, length,
 		w, f, padding_char, extra_char, padding_start));
 }
