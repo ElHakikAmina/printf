@@ -18,10 +18,12 @@
 #define FLAG_PLUS 2
 /* 4 for 0*/
 #define FLAG_ZERO 4
+/* 8 for hash*/
 #define FLAG_HASH 8
+/* 16 for space */
 #define FLAG_SPACE 16
 
-/* will be used in utils*/
+/* will be used in util */
 #define SIZE_LONG 2
 #define SIZE_SHORT 1
 
