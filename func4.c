@@ -30,7 +30,7 @@ UNUSED(s);
 	if (w > 1)
 	{
 		b[BUFFER_SIZE - 1] = '\0';
-		for (index = 0; index < w - 1; i++)
+		for (index = 0; index < w - 1; index++)
 			b[BUFFER_SIZE - index - 2] = padd;
 
 		if (f & FLAG_MINUS)
@@ -116,19 +116,19 @@ int write_integer(int ind, char b[],
 		for (i = 1; i < w - length + 1; i++)
 			b[i] = padd;
 		b[i] = '\0';
-		if (flags & F_MINUS && padd == ' ')
+		if (f & FLAG_MINUS && padd == ' ')
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
 			return (write(1, &b[ind], length) + write(1, &b[1], i - 1));
 		}
-		else if (!(flags & FLAG_MINUS) && padd == ' ')
+		else if (!(f & FLAG_MINUS) && padd == ' ')
 		{
 			if (extra_c)
 				b[--ind] = extra_c;
 			return (write(1, &b[1], i - 1) + write(1, &b[ind], length));
 		}
-		else if (!(flags & F_MINUS) && padd == '0')
+		else if (!(f & FLAG_MINUS) && padd == '0')
 		{
 			if (extra_c)
 				b[--padd_start] = extra_c;
