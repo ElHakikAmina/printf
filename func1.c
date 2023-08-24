@@ -1,8 +1,11 @@
 #include "main.h"
 
-/************************* PRINT CHAR *************************/
+/************************* PRINT CHARARCTER
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
+ * *************************/
 
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * print_character - Prints a single character.
  * @args: List of arguments.
  * @b: Buffer array to handle printing.
