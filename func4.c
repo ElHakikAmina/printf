@@ -1,6 +1,10 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
+ * */
 #include "main.h"
 
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * write_char - function that Prints a string
  * @c: characters.
  * @b: Buffer 
@@ -50,6 +54,7 @@ UNUSED(s);
 
 
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * write_number - Prints a string
  * @is_negative: all arguments
  * @ind: char types.
@@ -83,7 +88,7 @@ int write_number(int is_negative, int ind, char b[],
 }
 
 /**
- * 
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * @ind: Index at which the number starts on the buffer
  * @b: Buffer
  * @f: Flags
@@ -142,7 +147,7 @@ int write_integer(int ind, char b[],
 }
 
 /**
- * 
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * @is_negative: Number that indicate if the number  is neg or pos
  * @ind: index of the start of the buff
  * @b: buffer
@@ -200,7 +205,7 @@ int write_unsigned(int is_negative, int ind,
 }
 
 /**
- * 
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * @b: buffer
  * @ind: Index - the start of buff
  * @length: Length_of_number
