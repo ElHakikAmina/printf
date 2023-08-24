@@ -1,3 +1,6 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
+ * */
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"

@@ -1,3 +1,6 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
+ * */
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
