@@ -1,5 +1,9 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
+ * */
 #include "main.h"
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * print_non_printable_characters - Prints the hexadecimal ASCII codes of non-printable characters
  * @types: all arguments
  * @b: Buffer
@@ -43,6 +47,7 @@ int print_non_printable_characters(va_list types, char b[],
 }
 
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * print_reversed_string - Prints the reverse of a string.
  * @types: all the arguments
  * @b: Buffer
@@ -86,6 +91,7 @@ int print_reversed_string(va_list types, char b[],
 }
 
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * print_rot13_encoded_string - Encode a string in ROT13 and print it..
  * @types: all arguments
  * @b: Buffer 
