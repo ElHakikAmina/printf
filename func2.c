@@ -1,6 +1,10 @@
+/*
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
+ * */
 #include "main.h"
 /**** Function THAT PRINT A STRING *****/
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * print_custom_string - Prints a string.
  * @args: List of arguments.
  * @b: Buffer array to handle printing.
