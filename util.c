@@ -1,8 +1,14 @@
 #include "main.h"
 
+
+
+
+
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * is_printable_character -  Char is printable or NO
  * @character: Char that we evaluate.
+ *
  *
  * Return: 1 : character is printable, 0: otherwise
  */
@@ -13,6 +19,7 @@ int is_printable_character(char character) {
 
 
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * append_hexadecimal_code - Append ascci in hexadecimal code to buffer
  * @b: (buffer) Array of chars.
  * @inex: Index at which to start appending.
@@ -34,8 +41,8 @@ int append_hexadecimal_code(char ascii_code, char b[], int index)
 
 	return (3);
 }
-
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * is_digit_character - Is a char is a digit?
  * @character: Char that we will  evaluate
  *
@@ -46,7 +53,9 @@ int is_digit_character(char character) {
     return (character >= '0' && character <= '9');
 }
 
+
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * convert_number_size - Converts a number to the specified size using type casting
  * @n:(num) Number that will be casted.
  * @s: (size)Number that indicate the type that will be  casted.
@@ -66,7 +75,11 @@ long int convert_number_size(long int n, int s) {
 
 
 
+
+
+
 /**
+ * THIS PROJECT IS CREATED BY EL HAKIK AMINA AND  ASMA AOUBRAIM
  * convert_unsigned_size - Changes the size of a number to the specified size through casting
  * @n: num that will  be casted
  * @s: the size Number that indicate the type to be casted
